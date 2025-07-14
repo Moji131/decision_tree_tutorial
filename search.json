@@ -1,0 +1,72 @@
+[
+  {
+    "objectID": "setup.html",
+    "href": "setup.html",
+    "title": "Decision Tree Basics",
+    "section": "",
+    "text": "Sign up for an NCI account if you don’t already have one.\nSelect Projects and groups from the left hand side menu and then select the Find project or group tab. Search for cd82, the NCI-QCIF Training Partnership Project, and ask to join.",
+    "crumbs": [
+      "Setup Guide"
+    ]
+  },
+  {
+    "objectID": "setup.html#nci-account-setup",
+    "href": "setup.html#nci-account-setup",
+    "title": "Decision Tree Basics",
+    "section": "",
+    "text": "Sign up for an NCI account if you don’t already have one.\nSelect Projects and groups from the left hand side menu and then select the Find project or group tab. Search for cd82, the NCI-QCIF Training Partnership Project, and ask to join.",
+    "crumbs": [
+      "Setup Guide"
+    ]
+  },
+  {
+    "objectID": "setup.html#nci-australian-research-environment-are",
+    "href": "setup.html#nci-australian-research-environment-are",
+    "title": "Decision Tree Basics",
+    "section": "NCI Australian Research Environment (ARE)",
+    "text": "NCI Australian Research Environment (ARE)\n\nConnect to NCI Australian Research Environment.\nBe sure you use your NCI ID (eg, ab1234) for the username and not your email address.\nUnder Featured Apps, find and click the JupterLab: Start a JupyterLab instance option. \nTo Launch a JuptyerLab session, set these resource requirements:\n\n\n\nResource\nValue\n\n\n\n\nWalltime (hours)\n5\n\n\nQueue\nnormal\n\n\nCompute Size\nsmall\n\n\nProject\ncd82\n\n\nStorage\nscratch/cd82\n\n\nAdvanced Options…\n\n\n\nModules\npython3/3.9.2\n\n\nPython or Conda virtual environment base\n/scratch/cd82/venv_icwcnn\n\n\n\nThen click the Launch button.\nThis will take you to your interactive session page you will see that that your JupyterLab session is Queued while ARE is searching for a compute node that will satisfy your requirements.\nOnce found, the page will update with a button that you can click to Open JupyterLab.\nHere is a screenshot of a JupyterLab landing page that should be similar to the one that opens in your web browser after starting the JupyterLab server on either macOS or Windows.",
+    "crumbs": [
+      "Setup Guide"
+    ]
+  },
+  {
+    "objectID": "01_decision_tree_basics.html",
+    "href": "01_decision_tree_basics.html",
+    "title": "Decision Tree Basics",
+    "section": "",
+    "text": "Decision Trees are supervised learning models used for both classification and regression tasks. They work by recursively splitting the dataset based on feature values to reduce impurity.",
+    "crumbs": [
+      "01_decision_tree_basics"
+    ]
+  },
+  {
+    "objectID": "01_decision_tree_basics.html#how-it-works",
+    "href": "01_decision_tree_basics.html#how-it-works",
+    "title": "Decision Tree Basics",
+    "section": "How It Works",
+    "text": "How It Works\n\nFor classification, trees use metrics like Gini impurity or Entropy to decide the best split.\nFor regression, they typically minimize Mean Squared Error (MSE).\n\nThe tree starts at a root and splits the data into branches based on feature thresholds, creating a path to a decision leaf.\n\n🔍 How Splitting Works in Decision Trees\n\n\n🧪 Classification: Gini Impurity and Entropy\nTo decide the best feature and threshold to split on, decision trees evaluate impurity at each possible split. Lower impurity means a better split.\n\n✅ Gini Impurity\nGini measures how often a randomly chosen element would be incorrectly labeled if it was randomly labeled according to the distribution in the node:\n\\[\n\\text{Gini} = 1 - \\sum_{i=1}^{C} p_i^2\n\\]\nWhere: - $ C $ is the number of classes\n- $ p_i $ is the proportion of class $ i $\n\n\n✅ Entropy (Information Gain)\nEntropy measures the disorder or uncertainty of the classes:\n\\[\n\\text{Entropy} = - \\sum_{i=1}^{C} p_i \\log_2(p_i)\n\\]\nA split is chosen to minimize the weighted impurity (Gini or Entropy) of the resulting child nodes.\n\n\n\n\n📈 Regression: Mean Squared Error (MSE)\nIn regression trees, the quality of a split is measured using Mean Squared Error, which calculates how far predictions are from actual values.\n\n✅ MSE Formula\n\\[\n\\text{MSE} = \\frac{1}{n} \\sum_{i=1}^{n} (y_i - \\bar{y})^2\n\\]\nWhere: - $ y_i $ are the true values\n- $ {y} $ is the mean value of the current region\n- $ n $ is the number of samples\nThe best split minimizes the total MSE across the child nodes.\n\n\n\n\n🎯 Final Prediction\n\nClassification Tree: predicts the majority class in a leaf.\nRegression Tree: predicts the mean target value of samples in a leaf.",
+    "crumbs": [
+      "01_decision_tree_basics"
+    ]
+  },
+  {
+    "objectID": "01_decision_tree_basics.html#key-hyperparameters",
+    "href": "01_decision_tree_basics.html#key-hyperparameters",
+    "title": "Decision Tree Basics",
+    "section": "Key Hyperparameters",
+    "text": "Key Hyperparameters\n\nmax_depth: Maximum number of splits down any path.\nmin_samples_split: Minimum samples needed to split a node.\nmin_samples_leaf: Minimum samples in a leaf node.\ncriterion: Splitting metric (gini, entropy, squared_error).\n\n\n# Import libraries\nimport pandas as pd\nimport matplotlib.pyplot as plt\nfrom sklearn.datasets import load_iris, fetch_california_housing\nfrom sklearn.tree import DecisionTreeClassifier, DecisionTreeRegressor, plot_tree\nfrom sklearn.model_selection import train_test_split\nimport seaborn as sns\n%matplotlib inline\n\n\n# Load classification dataset (Iris as placeholder for visualization)\niris = load_iris(as_frame=True)\nX_cls = iris.data\ny_cls = iris.target\nXc_train, Xc_test, yc_train, yc_test = train_test_split(X_cls, y_cls, test_size=0.3, random_state=42)\n\n\n# Train a Decision Tree Classifier\nclf = DecisionTreeClassifier(max_depth=3, random_state=42)\nclf.fit(Xc_train, yc_train)\nplt.figure(figsize=(12, 6))\nplot_tree(clf, feature_names=iris.feature_names, class_names=iris.target_names, filled=True)\nplt.title('Decision Tree Classifier')\nplt.show()\n\n\n\n\n\n\n\n\n\n# Load regression dataset (California housing)\nhousing = fetch_california_housing(as_frame=True)\nX_reg = housing.data\ny_reg = housing.target\nXr_train, Xr_test, yr_train, yr_test = train_test_split(X_reg, y_reg, test_size=0.3, random_state=42)\n\n\n# Train a Decision Tree Regressor\nreg = DecisionTreeRegressor(max_depth=3, random_state=42)\nreg.fit(Xr_train, yr_train)\nplt.figure(figsize=(12, 6))\nplot_tree(reg, feature_names=housing.feature_names, filled=True)\nplt.title('Decision Tree Regressor')\nplt.show()",
+    "crumbs": [
+      "01_decision_tree_basics"
+    ]
+  },
+  {
+    "objectID": "01_decision_tree_basics.html#dataset-summaries",
+    "href": "01_decision_tree_basics.html#dataset-summaries",
+    "title": "Decision Tree Basics",
+    "section": "Dataset Summaries",
+    "text": "Dataset Summaries\n\n# Iris dataset\ndisplay(X_cls.describe())\nX_cls.hist(figsize=(10,6))\nplt.suptitle('Iris Feature Distributions')\nplt.show()\n\n\n\n\n\n\n\n\nsepal length (cm)\nsepal width (cm)\npetal length (cm)\npetal width (cm)\n\n\n\n\ncount\n150.000000\n150.000000\n150.000000\n150.000000\n\n\nmean\n5.843333\n3.057333\n3.758000\n1.199333\n\n\nstd\n0.828066\n0.435866\n1.765298\n0.762238\n\n\nmin\n4.300000\n2.000000\n1.000000\n0.100000\n\n\n25%\n5.100000\n2.800000\n1.600000\n0.300000\n\n\n50%\n5.800000\n3.000000\n4.350000\n1.300000\n\n\n75%\n6.400000\n3.300000\n5.100000\n1.800000\n\n\nmax\n7.900000\n4.400000\n6.900000\n2.500000\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n# California Housing dataset\ndisplay(X_reg.describe())\nX_reg.hist(figsize=(14,8))\nplt.suptitle('California Housing Feature Distributions')\nplt.show()\n\n\n\n\n\n\n\n\nMedInc\nHouseAge\nAveRooms\nAveBedrms\nPopulation\nAveOccup\nLatitude\nLongitude\n\n\n\n\ncount\n20640.000000\n20640.000000\n20640.000000\n20640.000000\n20640.000000\n20640.000000\n20640.000000\n20640.000000\n\n\nmean\n3.870671\n28.639486\n5.429000\n1.096675\n1425.476744\n3.070655\n35.631861\n-119.569704\n\n\nstd\n1.899822\n12.585558\n2.474173\n0.473911\n1132.462122\n10.386050\n2.135952\n2.003532\n\n\nmin\n0.499900\n1.000000\n0.846154\n0.333333\n3.000000\n0.692308\n32.540000\n-124.350000\n\n\n25%\n2.563400\n18.000000\n4.440716\n1.006079\n787.000000\n2.429741\n33.930000\n-121.800000\n\n\n50%\n3.534800\n29.000000\n5.229129\n1.048780\n1166.000000\n2.818116\n34.260000\n-118.490000\n\n\n75%\n4.743250\n37.000000\n6.052381\n1.099526\n1725.000000\n3.282261\n37.710000\n-118.010000\n\n\nmax\n15.000100\n52.000000\n141.909091\n34.066667\n35682.000000\n1243.333333\n41.950000\n-114.310000",
+    "crumbs": [
+      "01_decision_tree_basics"
+    ]
+  }
+]
