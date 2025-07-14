@@ -1,0 +1,35 @@
+# This is the main configuration file for your Quarto website.
+
+project:
+  type: website
+  # This tells Quarto to put the rendered website files into a 'docs' folder.
+  # This is required for the standard GitHub Pages setup.
+  output-dir: docs
+
+website:
+  # The title of your website, which appears in the browser tab and sidebar.
+  title: "Decision Tree Basics"
+
+  # We replace the 'navbar' with a 'sidebar' to move navigation to the left.
+  # Quarto will automatically use the first item listed in the 'contents'
+  # as the homepage and render it to 'index.html'.
+  sidebar:
+    style: "docked"
+    contents:
+      # Link to the homepage.
+      - href: 01_decision_tree_basics.ipynb
+        text: 01_decision_tree_basics
+      # Link to your second page.
+      - href: setup.md
+        text: Setup Guide
+
+# This section controls the default appearance and formatting for the HTML output.
+format:
+  html:
+    # You can choose from many themes: https://quarto.org/docs/output-formats/html-themes.html
+    theme: cosmo
+    # Links to a custom CSS file for additional styling (optional).
+    css: styles.css
+    # Adds a table of contents to the right side of the page.
+    toc: true
+    toc-location: right
