@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://Moji131.github.io/decision_tree_tutorial/setup.html</loc>
-    <lastmod>2025-07-15T08:41:28.414Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Moji131.github.io/decision_tree_tutorial/05_random_forest_regression.html</loc>
-    <lastmod>2025-07-15T13:32:21.493Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Moji131.github.io/decision_tree_tutorial/03_random_forest_classification.html</loc>
-    <lastmod>2025-07-15T13:16:10.140Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Moji131.github.io/decision_tree_tutorial/01_decision_tree_basics.html</loc>
-    <lastmod>2025-07-15T12:06:24.774Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Moji131.github.io/decision_tree_tutorial/02_decision_tree_classification.html</loc>
-    <lastmod>2025-07-15T13:02:42.734Z</lastmod>
+    <loc>https://Moji131.github.io/decision_tree_tutorial/06_xgboost_regression.html</loc>
+    <lastmod>2025-07-15T13:39:29.659Z</lastmod>
   </url>
   <url>
     <loc>https://Moji131.github.io/decision_tree_tutorial/04_xgboost_classification.html</loc>
     <lastmod>2025-07-15T13:20:14.237Z</lastmod>
   </url>
   <url>
-    <loc>https://Moji131.github.io/decision_tree_tutorial/06_xgboost_regression.html</loc>
-    <lastmod>2025-07-15T13:39:29.659Z</lastmod>
+    <loc>https://Moji131.github.io/decision_tree_tutorial/02_decision_tree_classification.html</loc>
+    <lastmod>2025-07-15T13:02:42.734Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Moji131.github.io/decision_tree_tutorial/00_setup_guide.html</loc>
+    <lastmod>2025-07-15T08:41:28.414Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Moji131.github.io/decision_tree_tutorial/01_decision_tree_basics.html</loc>
+    <lastmod>2025-07-15T12:06:24.774Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Moji131.github.io/decision_tree_tutorial/03_random_forest_classification.html</loc>
+    <lastmod>2025-07-15T13:16:10.140Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Moji131.github.io/decision_tree_tutorial/05_random_forest_regression.html</loc>
+    <lastmod>2025-07-15T13:32:21.493Z</lastmod>
   </url>
 </urlset>
