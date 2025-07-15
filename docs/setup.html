@@ -141,7 +141,7 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="nci-account-setup" class="level2">
 <h2 class="anchored" data-anchor-id="nci-account-setup">NCI Account Setup</h2>
-<p>Sign up for an <a href="https://my.nci.org.au/">NCI account</a> if you don’t already have one.</p>
+<p>Sign up for an <a href="https://opus.nci.org.au/spaces/Help/pages/12583153/How+to+create+an+NCI+user+account">NCI account</a> if you don’t already have one.</p>
 <p>Select <strong>Projects and groups</strong> from the left hand side menu and then select the <strong>Find project or group</strong> tab. Search for <strong>cd82</strong>, the NCI-QCIF Training Partnership Project, and ask to join. <img src="imgs/0_my_nci_project_cd82.png" class="img-fluid"></p>
 </section>
 <section id="nci-australian-research-environment-are" class="level2">
@@ -152,6 +152,10 @@ ul.task-list li input[type="checkbox"] {
 <p>Under <strong>Featured Apps</strong>, find and click the <strong>JupterLab: Start a JupyterLab instance</strong> option. <img src="imgs/0_nci_are_mainpage.png" class="img-fluid"></p>
 <p>To Launch a JuptyerLab session, set these resource requirements:</p>
 <table class="caption-top table">
+<colgroup>
+<col style="width: 61%">
+<col style="width: 38%">
+</colgroup>
 <thead>
 <tr class="header">
 <th>Resource</th>
@@ -189,7 +193,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>Python or Conda virtual environment base</td>
-<td>/scratch/cd82/venv_icwcnn</td>
+<td>/scratch/cd82/venv_workshop</td>
 </tr>
 </tbody>
 </table>
@@ -275,7 +279,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/Moji131\.github\.io\/decision_tree_tutorial\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

@@ -1,6 +1,6 @@
 
 ## NCI Account Setup
-Sign up for an  [NCI account](https://my.nci.org.au/)  if you don’t already have one.
+Sign up for an  [NCI account](https://opus.nci.org.au/spaces/Help/pages/12583153/How+to+create+an+NCI+user+account)  if you don’t already have one.
 
 Select  **Projects and groups**  from the left hand side menu and then select the  **Find project or group**  tab. Search for  **cd82**, the NCI-QCIF Training Partnership Project, and ask to join.
 ![](imgs/0_my_nci_project_cd82.png)
@@ -27,7 +27,7 @@ To Launch a JuptyerLab session, set these resource requirements:
 | Storage                                  | scratch/cd82              |
 | Advanced Options…                        |                           |
 | Modules                                  | python3/3.9.2             |
-| Python or Conda virtual environment base | /scratch/cd82/venv_icwcnn |
+| Python or Conda virtual environment base | /scratch/cd82/venv_workshop |
 
 Then click the Launch button.
 
