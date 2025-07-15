@@ -4,40 +4,28 @@
     "href": "setup.html",
     "title": "Decision Tree Basics",
     "section": "",
-    "text": "Sign up for an NCI account if you don’t already have one.\nSelect Projects and groups from the left hand side menu and then select the Find project or group tab. Search for cd82, the NCI-QCIF Training Partnership Project, and ask to join.",
-    "crumbs": [
-      "Setup Guide"
-    ]
+    "text": "Sign up for an NCI account if you don’t already have one.\nSelect Projects and groups from the left hand side menu and then select the Find project or group tab. Search for cd82, the NCI-QCIF Training Partnership Project, and ask to join."
   },
   {
     "objectID": "setup.html#nci-account-setup",
     "href": "setup.html#nci-account-setup",
     "title": "Decision Tree Basics",
     "section": "",
-    "text": "Sign up for an NCI account if you don’t already have one.\nSelect Projects and groups from the left hand side menu and then select the Find project or group tab. Search for cd82, the NCI-QCIF Training Partnership Project, and ask to join.",
-    "crumbs": [
-      "Setup Guide"
-    ]
+    "text": "Sign up for an NCI account if you don’t already have one.\nSelect Projects and groups from the left hand side menu and then select the Find project or group tab. Search for cd82, the NCI-QCIF Training Partnership Project, and ask to join."
   },
   {
     "objectID": "setup.html#nci-australian-research-environment-are",
     "href": "setup.html#nci-australian-research-environment-are",
     "title": "Decision Tree Basics",
     "section": "NCI Australian Research Environment (ARE)",
-    "text": "NCI Australian Research Environment (ARE)\n\nConnect to NCI Australian Research Environment.\nBe sure you use your NCI ID (eg, ab1234) for the username and not your email address.\nUnder Featured Apps, find and click the JupterLab: Start a JupyterLab instance option. \nTo Launch a JuptyerLab session, set these resource requirements:\n\n\n\n\n\n\n\nResource\nValue\n\n\n\n\nWalltime (hours)\n5\n\n\nQueue\nnormalbw\n\n\nCompute Size\nsmall\n\n\nProject\ncd82\n\n\nStorage\nscratch/cd82\n\n\nAdvanced Options…\n\n\n\nModules\npython3/3.9.2\n\n\nPython or Conda virtual environment base\n/scratch/cd82/venv_workshop\n\n\n\nThen click the Launch button.\nThis will take you to your interactive session page you will see that that your JupyterLab session is Queued while ARE is searching for a compute node that will satisfy your requirements.\nOnce found, the page will update with a button that you can click to Open JupyterLab.\nHere is a screenshot of a JupyterLab landing page that should be similar to the one that opens in your web browser after starting the JupyterLab server on either macOS or Windows.",
-    "crumbs": [
-      "Setup Guide"
-    ]
+    "text": "NCI Australian Research Environment (ARE)\n\nConnect to NCI Australian Research Environment.\nBe sure you use your NCI ID (eg, ab1234) for the username and not your email address.\nUnder Featured Apps, find and click the JupterLab: Start a JupyterLab instance option. \nTo Launch a JuptyerLab session, set these resource requirements:\n\n\n\n\n\n\n\nResource\nValue\n\n\n\n\nWalltime (hours)\n5\n\n\nQueue\nnormalbw\n\n\nCompute Size\nsmall\n\n\nProject\ncd82\n\n\nStorage\nscratch/cd82\n\n\nAdvanced Options…\n\n\n\nModules\npython3/3.9.2\n\n\nPython or Conda virtual environment base\n/scratch/cd82/venv_workshop\n\n\n\nThen click the Launch button.\nThis will take you to your interactive session page you will see that that your JupyterLab session is Queued while ARE is searching for a compute node that will satisfy your requirements.\nOnce found, the page will update with a button that you can click to Open JupyterLab.\nHere is a screenshot of a JupyterLab landing page that should be similar to the one that opens in your web browser after starting the JupyterLab server on either macOS or Windows."
   },
   {
     "objectID": "setup.html#transferring-workshop-notebooks",
     "href": "setup.html#transferring-workshop-notebooks",
     "title": "Decision Tree Basics",
     "section": "Transferring workshop notebooks",
-    "text": "Transferring workshop notebooks\nWhen you have a Jupyter server running use JupyterLab file navigator to go the folder that has the same name as your username. Then make a new Jupyter notebook by clicking on the “Python 3” icon under “Notebook” section and run the following code in a cell:\n!mkdir -p /scratch/cd82/$USER/notebooks\n!cp /scratch/cd82/tree_ws/* /scratch/cd82/$USER/notebooks/\n!ls /scratch/cd82/$USER/notebooks/\nAnd then use the Jupyter file browser to navigate to the directory: /scratch/cd82/$USER/notebooks/ (where $USER is your NCI username)",
-    "crumbs": [
-      "Setup Guide"
-    ]
+    "text": "Transferring workshop notebooks\nWhen you have a Jupyter server running use JupyterLab file navigator to go the folder that has the same name as your username. Then make a new Jupyter notebook by clicking on the “Python 3” icon under “Notebook” section and run the following code in a cell:\n!mkdir -p /scratch/cd82/$USER/notebooks\n!cp /scratch/cd82/tree_ws/* /scratch/cd82/$USER/notebooks/\n!ls /scratch/cd82/$USER/notebooks/\nAnd then use the Jupyter file browser to navigate to the directory: /scratch/cd82/$USER/notebooks/ (where $USER is your NCI username)"
   },
   {
     "objectID": "05_random_forest_regression.html",
