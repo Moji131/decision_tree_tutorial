@@ -164,7 +164,7 @@
     "href": "02_decision_tree_classification.html",
     "title": "🌳 Decision Tree Classification with Heart Disease Dataset",
     "section": "",
-    "text": "import os # Set working directory manually on Gadi to be able to load csv files user = os.getenv(‘USER’) os.chdir(‘/scratch/cd82/’+user+‘/notebooks/’)",
+    "text": "import os\n# Set working directory manually on Gadi to be able to load csv files\nuser = os.getenv('USER')\nos.chdir('/scratch/cd82/'+user+'/notebooks/')",
     "crumbs": [
       "02_decision_tree_classification"
     ]
