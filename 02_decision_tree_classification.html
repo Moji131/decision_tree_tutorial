@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>🌳 Decision Tree Classification with Heart Disease Dataset – Decision Tree Basics</title>
+<title>decision_tree_classification – Decision Tree Basics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -193,7 +193,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#what-is-a-decision-tree" id="toc-what-is-a-decision-tree" class="nav-link active" data-scroll-target="#what-is-a-decision-tree">What is a Decision Tree?</a>
+  <li><a href="#decision-tree-classification-with-heart-disease-dataset" id="toc-decision-tree-classification-with-heart-disease-dataset" class="nav-link active" data-scroll-target="#decision-tree-classification-with-heart-disease-dataset">🌳 Decision Tree Classification with Heart Disease Dataset</a>
+  <ul class="collapse">
+  <li><a href="#what-is-a-decision-tree" id="toc-what-is-a-decision-tree" class="nav-link" data-scroll-target="#what-is-a-decision-tree">What is a Decision Tree?</a>
   <ul class="collapse">
   <li><a href="#key-concepts" id="toc-key-concepts" class="nav-link" data-scroll-target="#key-concepts">Key Concepts:</a></li>
   </ul></li>
@@ -206,31 +208,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#interpreting-the-shap-summary-plot" id="toc-interpreting-the-shap-summary-plot" class="nav-link" data-scroll-target="#interpreting-the-shap-summary-plot">📊 Interpreting the SHAP Summary Plot</a></li>
   </ul></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">🌳 Decision Tree Classification with Heart Disease Dataset</h1>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
-<div class="quarto-title-meta">
 
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
+<p>import os # Set working directory manually on Gadi to be able to load csv files user = os.getenv(‘USER’) os.chdir(‘/scratch/cd82/’+user+‘/notebooks/’)</p>
+<section id="decision-tree-classification-with-heart-disease-dataset" class="level1">
+<h1>🌳 Decision Tree Classification with Heart Disease Dataset</h1>
 <section id="what-is-a-decision-tree" class="level2">
 <h2 class="anchored" data-anchor-id="what-is-a-decision-tree">What is a Decision Tree?</h2>
 <p>A <strong>Decision Tree</strong> is a supervised machine learning model that splits the data into branches to make predictions. It works by asking a series of yes/no questions (based on features) to divide the data until a decision is made.</p>
@@ -482,6 +472,7 @@ If the “Age” feature has mostly red dots (high values) with positive SHAP va
 </div>
 
 
+</section>
 </section>
 </section>
 
