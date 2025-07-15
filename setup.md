@@ -3,7 +3,7 @@
 Sign up for an  [NCI account](https://my.nci.org.au/)  if you don’t already have one.
 
 Select  **Projects and groups**  from the left hand side menu and then select the  **Find project or group**  tab. Search for  **cd82**, the NCI-QCIF Training Partnership Project, and ask to join.
-![](fig/0_my_nci_project_cd82.png)
+![](imgs/0_my_nci_project_cd82.png)
 
 ## NCI Australian Research Environment (ARE)
 
@@ -14,7 +14,7 @@ Connect to  [NCI Australian Research Environment](https://are.nci.org.au/).
 Be sure you use your NCI ID (eg, ab1234) for the username and not your email address.
 
 Under  **Featured Apps**, find and click the  **JupterLab: Start a JupyterLab instance**  option.
-![](fig/0_nci_are_mainpage.png)
+![](imgs/0_nci_are_mainpage.png)
 
 To Launch a JuptyerLab session, set these resource requirements:
 
@@ -39,5 +39,5 @@ Here is a screenshot of a JupyterLab landing page that should be similar to the 
 
 
 
-![](fig/0_jupyterlab_landing_page.png)
+![](imgs/0_jupyterlab_landing_page.png)
 
