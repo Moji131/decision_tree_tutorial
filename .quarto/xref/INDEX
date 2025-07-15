@@ -4,5 +4,32 @@
   },
   "setup.md": {
     "setup.html": "008c9809"
+  },
+  "02_decision_tree_classification.ipynb": {
+    "02_decision_tree_classification.html": "d4d62236"
+  },
+  "03_random_forest_classification.ipynb": {
+    "03_random_forest_classification.html": "193669ad"
+  },
+  "04_xgboost_classification.ipynb": {
+    "04_xgboost_classification.html": "23400255"
+  },
+  "05_random_forest_regression.ipynb": {
+    "05_random_forest_regression.html": "90b4d4df"
+  },
+  "06_xgboost_regression.ipynb": {
+    "06_xgboost_regression.html": "52c38989"
+  },
+  "old/01_decision_tree_basics2.ipynb": {
+    "01_decision_tree_basics2.html": "449de1b6"
+  },
+  "old/02_random_forest_classification copy.ipynb": {
+    "02_random_forest_classification copy.html": "748a24c2"
+  },
+  "old/02_random_forest_classification.ipynb": {
+    "02_random_forest_classification.html": "6f96ea49"
+  },
+  "00_setup_guide.md": {
+    "00_setup_guide.html": "ae7cdbd9"
   }
 }

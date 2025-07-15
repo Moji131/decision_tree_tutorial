@@ -21,7 +21,7 @@ To Launch a JuptyerLab session, set these resource requirements:
 | Resource                                 | Value                     |
 | ---------------------------------------- | ------------------------- |
 | Walltime (hours)                         | 5                         |
-| Queue                                    | normal                    |
+| Queue                                    | normalbw                    |
 | Compute Size                             | small                     |
 | Project                                  | cd82                      |
 | Storage                                  | scratch/cd82              |
@@ -41,3 +41,15 @@ Here is a screenshot of a JupyterLab landing page that should be similar to the 
 
 ![](imgs/0_jupyterlab_landing_page.png)
 
+## Transferring workshop notebooks
+
+When you have a Jupyter server running use JupyterLab file navigator to go the folder that has the same name as your username. Then make a new Jupyter notebook by clicking on the “Python 3” icon under “Notebook” section and run the following code in a cell:
+
+```
+!mkdir -p /scratch/cd82/$USER/notebooks
+!cp /scratch/cd82/tree_ws/* /scratch/cd82/$USER/notebooks/
+!ls /scratch/cd82/$USER/notebooks/
+```
+
+And then use the Jupyter file browser to navigate to the directory:
+/scratch/cd82/$USER/notebooks/ (where $USER is your NCI username)

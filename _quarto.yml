@@ -16,12 +16,22 @@ website:
   sidebar:
     style: "docked"
     contents:
-      # Link to the homepage.
+      - href: 00_setup_guide.md
+        text: 00_setup_guide
       - href: 01_decision_tree_basics.ipynb
         text: 01_decision_tree_basics
-      # Link to your second page.
-      - href: setup.md
-        text: Setup Guide
+      - href: 02_decision_tree_classification.ipynb
+        text: 02_decision_tree_classification
+      - href: 03_random_forest_classification.ipynb
+        text: 03_random_forest_classification
+      - href: 04_xgboost_classification.ipynb
+        text: 04_xgboost_classification    
+      - href: 05_random_forest_regression.ipynb
+        text: 05_random_forest_regression
+      - href: 06_xgboost_regression.ipynb
+        text: 06_xgboost_regression
+
+
 
 # This section controls the default appearance and formatting for the HTML output.
 format:
