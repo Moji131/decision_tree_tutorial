@@ -269,10 +269,10 @@ window.Quarto = {
 
 
 <div id="86c1b8bc" class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Set working directory manually on Gadi to be able to load csv files</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>user <span class="op">=</span> os.getenv(<span class="st">'USER'</span>)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>os.chdir(<span class="st">'/scratch/cd82/'</span><span class="op">+</span>user<span class="op">+</span><span class="st">'/notebooks/'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># import os</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># # Set working directory manually on Gadi to be able to load csv files</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># user = os.getenv('USER')</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># os.chdir('/scratch/cd82/'+user+'/notebooks/')</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="c7a2b118" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># !which python</span></span>
@@ -502,6 +502,76 @@ window.Quarto = {
 </div>
 </div>
 </div>
+<p>target (or sometimes named num in original datasets):</p>
+<p>Binary classification:</p>
+<p>0 → No heart disease</p>
+<p>1 → Heart disease present</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 85%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Column Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>age</code></td>
+<td>Age in years</td>
+</tr>
+<tr class="even">
+<td><code>sex</code></td>
+<td>Sex (1 = male; 0 = female)</td>
+</tr>
+<tr class="odd">
+<td><code>cp</code></td>
+<td>Chest pain type (0–3, categorical: typical angina to asymptomatic)</td>
+</tr>
+<tr class="even">
+<td><code>trestbps</code></td>
+<td>Resting blood pressure (in mm Hg)</td>
+</tr>
+<tr class="odd">
+<td><code>chol</code></td>
+<td>Serum cholesterol in mg/dl</td>
+</tr>
+<tr class="even">
+<td><code>fbs</code></td>
+<td>Fasting blood sugar &gt; 120 mg/dl (1 = true; 0 = false)</td>
+</tr>
+<tr class="odd">
+<td><code>restecg</code></td>
+<td>Resting electrocardiographic results (0, 1, 2)</td>
+</tr>
+<tr class="even">
+<td><code>thalach</code></td>
+<td>Maximum heart rate achieved</td>
+</tr>
+<tr class="odd">
+<td><code>exang</code></td>
+<td>Exercise-induced angina (1 = yes; 0 = no)</td>
+</tr>
+<tr class="even">
+<td><code>oldpeak</code></td>
+<td>ST depression induced by exercise relative to rest</td>
+</tr>
+<tr class="odd">
+<td><code>slope</code></td>
+<td>Slope of the peak exercise ST segment (0–2)</td>
+</tr>
+<tr class="even">
+<td><code>ca</code></td>
+<td>Number of major vessels colored by fluoroscopy (0–3)</td>
+</tr>
+<tr class="odd">
+<td><code>thal</code></td>
+<td>Thalassemia (1 = normal; 2 = fixed defect; 3 = reversible defect)</td>
+</tr>
+</tbody>
+</table>
 <div id="4917ab32" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># show numerical columns</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>display(df.describe())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -834,6 +904,53 @@ window.Quarto = {
 </div>
 </div>
 </div>
+<p>MedHouseVal: Median house value (in hundreds of thousands of dollars). For example, a value of 2.5 means $250,000.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 83%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Feature Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>MedInc</code></td>
+<td>Median income in block group (in tens of thousands of dollars)</td>
+</tr>
+<tr class="even">
+<td><code>HouseAge</code></td>
+<td>Median age of houses in the block group</td>
+</tr>
+<tr class="odd">
+<td><code>AveRooms</code></td>
+<td>Average number of rooms per household</td>
+</tr>
+<tr class="even">
+<td><code>AveBedrms</code></td>
+<td>Average number of bedrooms per household</td>
+</tr>
+<tr class="odd">
+<td><code>Population</code></td>
+<td>Block group population</td>
+</tr>
+<tr class="even">
+<td><code>AveOccup</code></td>
+<td>Average number of household members</td>
+</tr>
+<tr class="odd">
+<td><code>Latitude</code></td>
+<td>Latitude of the block group (geographic location)</td>
+</tr>
+<tr class="even">
+<td><code>Longitude</code></td>
+<td>Longitude of the block group (geographic location)</td>
+</tr>
+</tbody>
+</table>
 <div id="8c886cbd" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>df.hist(figsize<span class="op">=</span>(<span class="dv">14</span>,<span class="dv">8</span>))</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>plt.suptitle(<span class="st">'California Housing Feature Distributions'</span>)</span>
