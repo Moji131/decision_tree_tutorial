@@ -237,7 +237,8 @@ ul.task-list li input[type="checkbox"] {
 <section id="transferring-workshop-notebooks" class="level2">
 <h2 class="anchored" data-anchor-id="transferring-workshop-notebooks">Transferring workshop notebooks</h2>
 <p>When you have a Jupyter server running use JupyterLab file navigator to go the folder that has the same name as your username. Then make a new Jupyter notebook by clicking on the “Python 3” icon under “Notebook” section and run the following code in a cell:</p>
-<pre><code>!mkdir -p /scratch/cd82/$USER/notebooks
+<pre><code>!rm -rf /scratch/cd82/$USER/notebooks
+!mkdir -p /scratch/cd82/$USER/notebooks
 !cp /scratch/cd82/tree_ws/* /scratch/cd82/$USER/notebooks/
 !ls /scratch/cd82/$USER/notebooks/</code></pre>
 <p>And then use the Jupyter file browser to navigate to the directory: /scratch/cd82/$USER/notebooks/ (where $USER is your NCI username)</p>
