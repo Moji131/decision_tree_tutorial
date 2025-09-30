@@ -46,6 +46,7 @@ Here is a screenshot of a JupyterLab landing page that should be similar to the 
 When you have a Jupyter server running use JupyterLab file navigator to go the folder that has the same name as your username. Then make a new Jupyter notebook by clicking on the “Python 3” icon under “Notebook” section and run the following code in a cell:
 
 ```
+!rm -rf /scratch/cd82/$USER/notebooks
 !mkdir -p /scratch/cd82/$USER/notebooks
 !cp /scratch/cd82/tree_ws/* /scratch/cd82/$USER/notebooks/
 !ls /scratch/cd82/$USER/notebooks/
