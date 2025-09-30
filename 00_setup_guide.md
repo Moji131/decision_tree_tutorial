@@ -21,7 +21,7 @@ To Launch a JuptyerLab session, set these resource requirements:
 | Resource                                 | Value                     |
 | ---------------------------------------- | ------------------------- |
 | Walltime (hours)                         | 5                         |
-| Queue                                    | normalbw                    |
+| Queue                                    | normal                    |
 | Compute Size                             | small                     |
 | Project                                  | cd82                      |
 | Storage                                  | scratch/cd82              |
